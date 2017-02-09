@@ -1,9 +1,8 @@
 execSync = require('child_process').execSync
 
-module.exports = class
-  _DIR_PATH = "#{__dirname}/../../"
-  _SCR_NAME = 'slack_api_users_getPresence.rb'
+DIR_PATH = "#{__dirname}/../../"
+SCR_NAME = 'slack_api_users_getPresence.rb'
 
-  @get: (token, user_id) ->
-    cmd = "ruby #{_DIR_PATH}#{_SCR_NAME} #{token} #{user_id}"
-    result = execSync cmd
+module.exports = (token, user_id) ->
+  cmd = "ruby #{DIR_PATH}#{SCR_NAME} #{token} #{user_id}"
+  execSync cmd

@@ -1,3 +1,3 @@
 
 
-module.exports.Users = require "#{__dirname}/users"
+module.exports.users = require "#{__dirname}/users"
